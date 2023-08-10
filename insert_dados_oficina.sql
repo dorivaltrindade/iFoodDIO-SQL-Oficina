@@ -51,7 +51,9 @@ use oficina_db;
 							('Lanterna dianteira',				220),
 							('Lanterna trazeira',				310),
 							('Correia de ar condicionado',		75),
-                            ('Bateria',							590);
+                            ('Bateria',							590),
+                            ('Porca para rodas',				20),
+                            ('Arruelas para rodas', 			10);
                 
 		select * from Peca;
         
@@ -88,23 +90,23 @@ use oficina_db;
         
 -- [06] inserindo dados para tabela Orcamento
 		insert into Orcamento 	(	idResponsavel_fk, 	idVeiculo_fk, 	Descricao, 										DataInicio,		Valor,	Aprova,	DataTermino,	FormaPagamento)
-					values 		(	11,					1,				'Instalar pneus novos',							'2023-08-10',	1800,	'S',	'2023-08-10',	default),
-								(	11,					2,				'Instalar farois novos',						'2023-08-11',	1600,	'N',	NULL,			NULL),
+					values 		(	11,					1,				'Instalar pneus novos (4 unidades)',			'2023-08-10',	1800,	'S',	'2023-08-10',	default),
+								(	11,					2,				'Instalar farois novos (2 unidades)',			'2023-08-11',	1600,	'N',	NULL,			NULL),
 								(	11,					3,				'Trocar oleo do motor',							'2023-08-11',	180,	'S',	'2023-08-11',	'PIX'),
 								(	11,					4,				'Corrigir falhas do cambio automatico',			'2023-08-12',	960,	'S',	'2023-08-13',	default),
-								(	11,					5,				'Substituir a embreagem',						'2023-08-13',	675,	'S',	'2023-08-14',	default),
-								(	11,					6,				'Substituir a bateria',							'2023-08-14',	680,	'S',	'2023-08-14',	default),
-								(	11,					1,				'Polimento geral da pintura',					'2023-08-15',	330,	'S',	'2023-08-17',	default),
-								(	11,					5,				'Instalacao do sistema de alarme anti-furto',	'2023-08-16',	485,	'S',	'2023-08-16',	default),
-								(	11,					6,				'Substituicao dos amortecedores',				'2023-08-17',	595,	'N',	NULL,			NULL);
+								(	11,					5,				'Substituir a embreagem',						'2023-08-12',	675,	'S',	'2023-08-14',	default),
+								(	11,					6,				'Substituir a bateria',							'2023-08-12',	680,	'S',	'2023-08-14',	default),
+								(	11,					1,				'Polimento geral da pintura',					'2023-08-15',	330,	NULL,	NULL,			default),
+								(	11,					5,				'Instalacao do sistema de alarme anti-furto',	'2023-08-16',	485,	'S',	'2023-08-17',	default),
+								(	11,					6,				'Substituicao dos amortecedores',				'2023-08-16',	595,	'N',	NULL,			NULL);
                                 
 		select * from Orcamento;
         
 -- [07] inserindo dados para tabela OrdemServico
 		insert into OrdemServico (	idOrcamento_fk,	idResponsavelOS_fk,	idServico_fk,	idPeca_fk,	idProduto_fk,	Custo)
 						values	(	1,				7,					4,				5,			NULL,			1480),
-								(	1,				8,					5,				NULL,		NULL,			200),
-                                (	1,				5,					6,				NULL,		NULL,			120),
+								(	1,				8,					5,				15,			NULL,			200),
+                                (	1,				5,					6,				16,			NULL,			120),
                                 
 								(	2,				6,					12,				10,			NULL,			1600),
                                 
