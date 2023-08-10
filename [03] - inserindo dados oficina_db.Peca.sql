@@ -13,6 +13,8 @@
 							('Lanterna dianteira',				220),
 							('Lanterna trazeira',				310),
 							('Correia de ar condicionado',		75),
-                            ('Bateria',							590);
+                            ('Bateria',							590),
+                            ('Porca para rodas',				20),
+                            ('Arruelas para rodas', 			10);
                 
 		select * from Peca;

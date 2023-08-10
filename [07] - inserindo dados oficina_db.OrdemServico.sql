@@ -1,8 +1,8 @@
 -- [07] inserindo dados para tabela OrdemServico
 		insert into OrdemServico (	idOrcamento_fk,	idResponsavelOS_fk,	idServico_fk,	idPeca_fk,	idProduto_fk,	Custo)
 						values	(	1,				7,					4,				5,			NULL,			1480),
-								(	1,				8,					5,				NULL,		NULL,			200),
-                                (	1,				5,					6,				NULL,		NULL,			120),
+								(	1,				8,					5,				15,			NULL,			200),
+                                (	1,				5,					6,				16,			NULL,			120),
                                 
 								(	2,				6,					12,				10,			NULL,			1600),
                                 
